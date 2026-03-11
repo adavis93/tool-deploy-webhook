@@ -1,6 +1,5 @@
 [build]
-  # The root index.js is treated as the "index" Netlify Function.
-  functions = "."
+  functions = "functions"
 
 [functions]
   # Use esbuild to bundle dependencies (express, serverless-http) at deploy time.
