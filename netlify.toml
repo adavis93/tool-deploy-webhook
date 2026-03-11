@@ -1,0 +1,14 @@
+[build]
+  functions = "functions"
+
+[functions]
+  # Use esbuild to bundle dependencies (express, serverless-http) at deploy time.
+  node_bundler = "esbuild"
+
+# Rewrite clean /deploy/* paths to the serverless function.
+# Express sees the original path (e.g. /deploy/staging) via serverless-http.
+[[redirects]]
+  from   = "/deploy/*"
+  to     = "/.netlify/functions/index"
+  status = 200
+  force  = true
