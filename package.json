@@ -1,0 +1,20 @@
+{
+  "name": "tool-deploy-webhook",
+  "version": "1.0.0",
+  "description": "Internal webhook server for triggering Netlify deployments by environment",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node -r dotenv/config index.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "serverless-http": "^3.2.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.5"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
